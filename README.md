@@ -38,7 +38,7 @@ The analysis focuses on five main questions:
 
 ## 🌱 1. Vegetation Change — NDVI Sen's Slope
 
-![NDVI Sen's Slope](outputs/ndvi_sens_slope.png)
+![NDVI Sen's Slope](outputs/ndvi_trend_map.png)
 
 To investigate long-term vegetation change, I analyzed a multi-year **NDVI time series** and calculated **Sen's Slope** for each pixel.
 
@@ -56,7 +56,7 @@ This provides a spatial representation of where vegetation conditions have chang
 
 ## 🌡️ 2. Land Surface Temperature Change
 
-![Land Surface Temperature Change](outputs/delta_lst_landsat.png)
+![Land Surface Temperature Change](outputs/delta_lst_map.png)
 
 I analyzed changes in **Land Surface Temperature (LST)** to investigate whether the land surface has become warmer or cooler over the study period.
 
@@ -76,7 +76,7 @@ The analysis classifies areas into:
 
 ## 🌿 3. Vegetation vs. Surface Temperature
 
-![NDVI-LST Correlation](outputs/ndvi_lst_correlation.png)
+![NDVI-LST Correlation](outputs/ndvi_lst_corr.png)
 
 To investigate the relationship between vegetation and surface temperature, I performed a **pixel-wise NDVI–LST correlation analysis**.
 
@@ -94,7 +94,7 @@ However, the correlation represents an **association rather than proof of causat
 
 ## 🛰️ 4. Land-Cover Transitions
 
-![Land Cover Transitions](outputs/lc_transition.png)
+![Land Cover Transitions](outputs/landcover_transition_map.png)
 
 To understand *how* the landscape changed, rather than only measuring vegetation trends, I analyzed **land-cover transitions**.
 
@@ -114,7 +114,7 @@ This analysis provides additional context for interpreting the NDVI trends.
 
 ## 🛣️ 5. Infrastructure Pressure
 
-![Road Proximity Analysis](outputs/road_degradation.png)
+![Road Proximity Analysis](outputs/road_degradation_map.png)
 
 Finally, I investigated whether land-cover degradation was spatially associated with transportation infrastructure.
 
@@ -137,30 +137,6 @@ Road proximity may also act as a proxy for:
 - agricultural expansion
 - development
 - other human activities
-
----
-
-# 🧩 Ecological Stress Hotspots
-
-The project also combines vegetation and temperature information to identify areas where **vegetation decline coincides with increasing surface temperature**.
-
-These areas can be interpreted as potential **ecological stress hotspots**, where multiple indicators of environmental change occur together.
-
-![Ecological Stress Hotspots](outputs/ecological_stress_hotspots.png)
-
-The purpose of this layer is not to establish causality, but to provide a spatial screening mechanism for identifying regions that may warrant further investigation.
-
----
-
-# 🗺️ District-Level Vulnerability
-
-In addition to pixel-level analysis, the project aggregates environmental indicators at the **district level** to construct a composite vulnerability index.
-
-The index combines multiple indicators of environmental stress to identify districts experiencing relatively greater levels of observed degradation and warming.
-
-![District Vulnerability](outputs/district_vulnerability.png)
-
-This provides a more decision-oriented view of the analysis, allowing environmental patterns to be compared across administrative boundaries.
 
 ---
 
@@ -315,8 +291,7 @@ Degradation is then compared across distance bands to investigate whether degrad
 │   ├── NDVI trend maps
 │   ├── LST maps
 │   ├── land-cover transition maps
-│   ├── correlation maps
-│   └── vulnerability outputs
+│   └── correlation maps
 │
 └── README.md
 ```

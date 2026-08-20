@@ -114,7 +114,7 @@ This analysis provides additional context for interpreting the NDVI trends.
 
 ## 🛣️ 5. Infrastructure Pressure
 
-![Road Proximity Analysis](outputs/road_degradation_map.png)
+![Road Proximity Analysis](outputs/roads_degradation_map.png)
 
 Finally, I investigated whether land-cover degradation was spatially associated with transportation infrastructure.
 
@@ -123,6 +123,8 @@ Major roads were converted into a raster representation and **Euclidean distance
 Degradation rates were then analyzed across different road-distance bands.
 
 Approximately **14% of identified land-cover degradation occurred within the first kilometer of roads**, with degradation decreasing substantially beyond approximately **5 km**.
+
+![Road Proximity Analysis](outputs/proximity_chart.png)
 
 ### Interpretation
 

@@ -1,6 +1,18 @@
 // =========================================================
 // LANDSAT LST TREND (Sindh)
 // Early vs Recent ΔLST
+//
+// ΔLST = mean LST 2018–2024 (Landsat 8/9) − mean LST 2001–2005
+//        (Landsat 5 + Landsat 7 before the SLC failure on 2003-05-31)
+//
+// KNOWN ARTEFACTS in the exported ΔLST (see main.ipynb §3.3):
+// - ~500 m near-horizontal striping: scan/detector striping of the
+//   whiskbroom TM/ETM+ thermal bands in the early composite. Not SLC-off
+//   gaps — Landsat 7 is filtered to before 2003-05-01.
+// - Diagonal bands with straight edges: WRS-2 path/scene boundaries.
+//   mean() over all seasons gives each path a different seasonal mix.
+// Possible fix for a future export: restrict both periods to the same
+// months, use median() instead of mean(), or use MODIS MOD11A2 LST.
 // =========================================================
 
 var region = ee.FeatureCollection("projects/citric-yen-487317-c1/assets/sindh_province")

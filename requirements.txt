@@ -1,0 +1,16 @@
+# Versions the notebook was last run with (Python 3.11)
+numpy==1.26.4
+pandas==3.0.0
+geopandas==1.1.2
+shapely==2.1.2
+pyogrio==0.10.0
+rasterio==1.4.3
+rioxarray==0.15.0
+xarray==2024.2.0
+dask==2026.3.0
+rasterstats==0.20.0
+scipy==1.17.0
+mapclassify==2.10.0
+matplotlib==3.10.8
+seaborn==0.13.2
+ipykernel==6.31.0

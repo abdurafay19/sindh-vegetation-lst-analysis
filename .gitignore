@@ -1,0 +1,8 @@
+# Large inputs exported from GEE / OSM — not stored in the repo (see README → Data)
+data/*.tif
+data/sindh_roads.gpkg
+data/ne_10m_rivers_lake_centerlines/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/

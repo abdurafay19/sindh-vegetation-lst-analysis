@@ -68,11 +68,13 @@ var corr = monthly.reduce(
 // ----------------------
 // OUTPUT MAP
 // ----------------------
-var result = corr.select("correlation").clip(region);
+// Band names match what the notebook reads: band 1 = pearson_r, band 2 = p_value
+var result = corr.select(["correlation", "p-value"], ["pearson_r", "p_value"])
+  .clip(region);
 
 Map.centerObject(region, 7);
 
-Map.addLayer(result, {
+Map.addLayer(result.select("pearson_r"), {
   min: -1,
   max: 1,
   palette: ["08306b", "f7f7f7", "67000d"]
